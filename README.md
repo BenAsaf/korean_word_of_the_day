@@ -30,7 +30,7 @@ Remember that you need the RSS URL, it is obtainable at the top part of the webs
 > Visit this page each day to learn new Italian vocabulary, or get new words delivered to you every day via email or **_RSS_** feed.
 
 
-## WIP:
+## WIP
 Extracting the Audio links so it's available.
 Preferably maybe embed a button in the Terminal using plugin.
 
