@@ -26,8 +26,9 @@ https://www.transparent.com/word-of-the-day/today/german.html
 https://www.transparent.com/word-of-the-day/today/italian.html
 
 Remember that you need the RSS URL, it is obtainable at the top part of the website in the text:
->>Italian Word of the Day<br>
-Visit this page each day to learn new Italian vocabulary, or get new words delivered to you every day via email or **_RSS_** feed.
+> Italian Word of the Day<br>
+> Visit this page each day to learn new Italian vocabulary, or get new words delivered to you every day via email or **_RSS_** feed.
+
 
 ## WIP:
 Extracting the Audio links so it's available.
