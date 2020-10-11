@@ -1,6 +1,8 @@
 # Korean Word of the Day
 Korean Word of the Day utility for Linux terminal.<br>
 
+![](./screenshots/screenshot.png)
+
 ## Example alias for your 'zshrc'/'bashrc'
 >     function kwotd() { path/to/script/venv/bin/python path/to/script/kwotd.py; } 
 >     kwotd  # run it once.
@@ -35,5 +37,3 @@ Extracting the Audio links so it's available.
 Preferably maybe embed a button in the Terminal using plugin.
 
 Extracting the links might require Selenium because there is a delay and an iFrame when loading that part.
-
-![](./screenshots/screenshot.png)
