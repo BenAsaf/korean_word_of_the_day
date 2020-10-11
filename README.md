@@ -1,5 +1,6 @@
 # Korean Word of the Day
 Korean Word of the Day utility for Linux terminal.<br>
+Can be used for other languages as  well. Read below.
 
 ![](./screenshots/screenshot.png)
 
