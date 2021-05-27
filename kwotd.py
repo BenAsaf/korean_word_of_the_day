@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import ConnectTimeout
 import shutil
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -7,7 +8,7 @@ from tempfile import gettempdir
 import termcolor
 
 URL = "http://feeds.feedblitz.com/korean-word-of-the-day"
-
+DEFAULT_REQUEST_TIMEOUT = 3  # 3 seconds
 # URL_FOR_AUDIO = "https://www.transparent.com/word-of-the-day/today/korean.html"  # TODO WIP
 # URL_FOR_AUDIO = "https://wotd.transparent.com/widget/?lang=korean&_ga=2.191404842.1871955312.1601750216-1232972085.1601537782"  # TODO WIP
 
@@ -49,8 +50,8 @@ def is_still_relevant(now, saved):
 
 
 def download():
-    global TITLE, URL
-    _response = requests.get(URL)
+    global TITLE, URL, DEFAULT_REQUEST_TIMEOUT
+    _response = requests.get(URL, timeout=DEFAULT_REQUEST_TIMEOUT)
     response_content = _response.content.decode()
 
     soup = BeautifulSoup(response_content, "lxml")
@@ -102,9 +103,11 @@ def main():
         print(PART_OF_SPEECH, part_of_speech)
         print(EXAMPLE_SENTENCE, example_sentence)
         print(SENTENCE_MEANING, sentence_meaning)
-
+    except ConnectTimeout as e:
+        print(TITLE, "Connection Timed Out!")
     except Exception as e:
         print(TITLE, e)
+
 
 
 if __name__ == '__main__':
